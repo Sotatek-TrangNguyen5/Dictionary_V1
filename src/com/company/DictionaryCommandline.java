@@ -3,14 +3,22 @@ package com.company;
 import java.util.ArrayList;
 
 public class DictionaryCommandline {
+    DictionaryManagement dictionaryManagement = new DictionaryManagement();
     public DictionaryCommandline() {
     }
 
-    public void dictionaryBasic(){
+    public void dictionaryBasic() {
         ArrayList<Word> wordArrayList = new ArrayList<Word>();
-        DictionaryManagement dictionaryManagement = new DictionaryManagement();
         Word newWord = dictionaryManagement.insertFromCommandline();
         wordArrayList.add(newWord);
-        dictionaryManagement.showAllWords(wordArrayList);
+        dictionaryManagement.showAllWords();
+    }
+
+    /**
+     * 
+     */
+    public void dictionaryAdvanced() {
+        dictionaryManagement.insertFromFile("dictionaries.txt");
+        dictionaryManagement.showAllWords();
     }
 }
