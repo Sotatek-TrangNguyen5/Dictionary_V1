@@ -1,3 +1,5 @@
 Eye Mắt
 Hand    Tay
 Watch   Xem
+Hello   Xin_Chào
+Love    Tình_Yêu
